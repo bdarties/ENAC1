@@ -8,9 +8,13 @@ def get_db_connection():
     conn.row_factory = sqlite3.Row
     return conn
 
-@app.route('/')
+@app.route('/')  #route par défaut
 def hello():
     return render_template('hello.html')
+
+@app.route('/hello2')
+def hello():
+    return render_template('hello2.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
