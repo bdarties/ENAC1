@@ -16,5 +16,9 @@ def hello():
 def hello():
     return render_template('hello2.html')
 
+@app.route('/hello3')
+def hello():
+    return render_template('hello2.html')
+
 if __name__ == '__main__':
     app.run(debug=True)
